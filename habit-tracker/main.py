@@ -1,14 +1,20 @@
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
-USERNAME = "sent1nu11"
-TOKEN = "sdfieru38flvcsdf"
+load_dotenv()
+
+USER = os.getenv("USER")
+TOKEN = os.getenv("TOKEN")
 GRAPH_ID = "graph1"
 pixela_endpoint = "https://pixe.la/v1/users"
 
+print(TOKEN)
+
 user_params = {
     "token": TOKEN,
-    "username": USERNAME,
+    "username": USER,
     "agreeTermsOfService": "yes",
     "notMinor": "yes"
 }
@@ -16,7 +22,7 @@ user_params = {
 # response = requests.post(url=pixela_endpoint, json=user_params)
 # print(response.text)
 
-graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
+graph_endpoint = f"{pixela_endpoint}/{USER}/graphs"
 
 graph_config = {
    "id": GRAPH_ID,
@@ -26,7 +32,7 @@ graph_config = {
    "color": "sora",
 }
 
-pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
+pixel_creation_endpoint = f"{pixela_endpoint}/{USER}/graphs/{GRAPH_ID}"
 
 today = datetime.now()
 print(today.strftime("%Y%m%d"))
