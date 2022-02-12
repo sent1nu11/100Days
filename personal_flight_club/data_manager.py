@@ -6,4 +6,6 @@ class DataManager:
     response = requests.get(url="https://api.sheety.co/ad8d11e0d75ff57d00d6d5660e56066b/flightDeals2/prices")
     data = response.json()
 
-    pprint(data)
+    sheet_data = data
+    print(sheet_data)
+
