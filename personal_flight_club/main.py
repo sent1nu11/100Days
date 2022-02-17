@@ -4,5 +4,5 @@ import requests
 import data_manager
 from pprint import pprint
 
-data_manager.DataManager()doro
+data_manager.DataManager()
 
