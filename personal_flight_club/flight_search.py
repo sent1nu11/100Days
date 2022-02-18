@@ -1,3 +1,10 @@
+import requests
+
+TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
+TEQUILA_API_KEY = ""
+
 class FlightSearch:
-    #This class is responsible for talking to the Flight Search API.
-    pass
+
+    # Return "TESTING" for now to make sure Sheety is working. Get TEQUILA API data later
+    code = "TESTING"
+    return code
