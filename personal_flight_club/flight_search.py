@@ -1,7 +1,7 @@
 import requests
 
 TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
-TEQUILA_API_KEY = ""
+TEQUILA_API_KEY = "nmijJbpJw4SyKMmoNbYeGoNTXt7Hj34S"
 
 class FlightSearch:
 
